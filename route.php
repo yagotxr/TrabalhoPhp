@@ -2,7 +2,7 @@
 
     use controller\LoginController;
     use controller\MenuController;
-    use controller\UserController;
+    use controller\AviaoController;
 
     /*
     * Verifica comando da última requisição POST HTTP
@@ -26,8 +26,8 @@
             case 'MenuView' :
                 new MenuController();
                 break;
-            case 'UserView' :
-                new UserController($command);
+            case 'VeiculoView' :
+                new AviaoController($command);
                 break;
             default:
                 //new ErrorController();

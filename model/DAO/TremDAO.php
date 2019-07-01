@@ -2,14 +2,14 @@
 
    namespace model\DAO;
 
-   class AviaoDAO {
+   class TremDAO {
 
         private $connection;
-        private $aviao;
+        private $trem;
 
-        function __construct($connection, $aviao) {
+        function __construct($connection, $trem) {
             $this->connection = $connection;
-            $this->aviao = $aviao;
+            $this->trem = $trem;
         }
 
 		/*
@@ -19,10 +19,10 @@
 		{
 			$con = $this->connection;
 			
-			$query = "INSERT INTO AVIAO(modelo, ano) 
+			$query = "INSERT INTO TREM(modelo, ano) 
 						values(
-							'" . $this->aviao->modelo . "',
-							'" . $this->aviao->ano . "'
+							'" . $this->trem->modelo . "',
+							'" . $this->trem->ano . "'
 						)";
 						
 			$stmt = $con->prepare($query);
@@ -36,9 +36,9 @@
 		{
 			$con = $this->connection;
 			
-			$query = "UPDATE AVIAO SET 
-							modelo='" . $this->aviao->modelo . "',
-							ano='" . $this->aviao->ano . "',
+			$query = "UPDATE TREM SET 
+							modelo='" . $this->trem->modelo . "',
+							ano='" . $this->trem->ano . "',
 						WHERE modelo = '$modelo'";
 			
 			$stmt = $con->prepare($query);
@@ -52,7 +52,7 @@
 		{
 			$con = $this->connection;
 			
-			$query = "DELETE FROM AVIAO WHERE modelo = '$modelo'";
+			$query = "DELETE FROM TREM WHERE modelo = '$modelo'";
 			
 			$stmt = $con->prepare($query);
 			
@@ -62,11 +62,11 @@
 		/*
 		* Método para recuperar todos os usuarios
 		*/
-		public function getAllAviao()
+		public function getAllTrem()
 		{
 			$con = $this->connection;
 			
-			$query = "SELECT * FROM AVIAO";
+			$query = "SELECT * FROM TREM";
 			
 			$rs = $con->query($query);
 			

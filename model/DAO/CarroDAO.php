@@ -2,14 +2,14 @@
 
    namespace model\DAO;
 
-   class AviaoDAO {
+   class CarroDAO {
 
         private $connection;
-        private $aviao;
+        private $carro;
 
-        function __construct($connection, $aviao) {
+        function __construct($connection, $moto) {
             $this->connection = $connection;
-            $this->aviao = $aviao;
+            $this->carro = $carro;
         }
 
 		/*
@@ -19,10 +19,10 @@
 		{
 			$con = $this->connection;
 			
-			$query = "INSERT INTO AVIAO(modelo, ano) 
+			$query = "INSERT INTO CARRO(modelo, ano) 
 						values(
-							'" . $this->aviao->modelo . "',
-							'" . $this->aviao->ano . "'
+							'" . $this->carro->modelo . "',
+							'" . $this->carro->ano . "'
 						)";
 						
 			$stmt = $con->prepare($query);
@@ -36,9 +36,9 @@
 		{
 			$con = $this->connection;
 			
-			$query = "UPDATE AVIAO SET 
-							modelo='" . $this->aviao->modelo . "',
-							ano='" . $this->aviao->ano . "',
+			$query = "UPDATE CARRO SET 
+							modelo='" . $this->carro->modelo . "',
+							ano='" . $this->carro->ano . "',
 						WHERE modelo = '$modelo'";
 			
 			$stmt = $con->prepare($query);
@@ -52,7 +52,7 @@
 		{
 			$con = $this->connection;
 			
-			$query = "DELETE FROM AVIAO WHERE modelo = '$modelo'";
+			$query = "DELETE FROM CARRO WHERE modelo = '$modelo'";
 			
 			$stmt = $con->prepare($query);
 			
@@ -62,11 +62,11 @@
 		/*
 		* Método para recuperar todos os usuarios
 		*/
-		public function getAllAviao()
+		public function getAllCarro()
 		{
 			$con = $this->connection;
 			
-			$query = "SELECT * FROM AVIAO";
+			$query = "SELECT * FROM CARRO";
 			
 			$rs = $con->query($query);
 			

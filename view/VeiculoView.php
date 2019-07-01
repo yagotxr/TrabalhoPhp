@@ -18,7 +18,7 @@
             $actionName = $this->getName(__CLASS__);
 
             // Renderiza a tela HTML
-            require_once "html/Veiculohrml.php";
+            require_once "html/Veiculohtml.php";
 
             // Renderiza Superclasse
             parent::render($controller);

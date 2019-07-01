@@ -2,14 +2,14 @@
 
    namespace model\DAO;
 
-   class AviaoDAO {
+   class MotoDAO {
 
         private $connection;
-        private $aviao;
+        private $moto;
 
-        function __construct($connection, $aviao) {
+        function __construct($connection, $moto) {
             $this->connection = $connection;
-            $this->aviao = $aviao;
+            $this->moto = $moto;
         }
 
 		/*
@@ -19,10 +19,10 @@
 		{
 			$con = $this->connection;
 			
-			$query = "INSERT INTO AVIAO(modelo, ano) 
+			$query = "INSERT INTO MOTO(modelo, ano) 
 						values(
-							'" . $this->aviao->modelo . "',
-							'" . $this->aviao->ano . "'
+							'" . $this->moto->modelo . "',
+							'" . $this->moto->ano . "'
 						)";
 						
 			$stmt = $con->prepare($query);
@@ -36,9 +36,9 @@
 		{
 			$con = $this->connection;
 			
-			$query = "UPDATE AVIAO SET 
-							modelo='" . $this->aviao->modelo . "',
-							ano='" . $this->aviao->ano . "',
+			$query = "UPDATE MOTO SET 
+							modelo='" . $this->moto->modelo . "',
+							ano='" . $this->moto->ano . "',
 						WHERE modelo = '$modelo'";
 			
 			$stmt = $con->prepare($query);
@@ -52,7 +52,7 @@
 		{
 			$con = $this->connection;
 			
-			$query = "DELETE FROM AVIAO WHERE modelo = '$modelo'";
+			$query = "DELETE FROM MOTO WHERE modelo = '$modelo'";
 			
 			$stmt = $con->prepare($query);
 			
@@ -62,11 +62,11 @@
 		/*
 		* Método para recuperar todos os usuarios
 		*/
-		public function getAllAviao()
+		public function getAllMoto()
 		{
 			$con = $this->connection;
 			
-			$query = "SELECT * FROM AVIAO";
+			$query = "SELECT * FROM MOTO";
 			
 			$rs = $con->query($query);
 			

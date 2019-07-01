@@ -30,15 +30,12 @@
 <?php } ?>
 
 <?php if ($optCommand == "CREATE") { ?>
-
     <button type="submit" value="<?php echo $actionName.":"."CREATE";?>" name="requestAction">Salvar</button>
 
 <?php } else if ($optCommand == "DELETE") { ?>
-
     <button type="submit" value="<?php echo $actionName.":"."DELETE";?>" name="requestAction">Deletar</button>
 
 <?php } else if ($optCommand == "UPDATE") { ?>
-
     <button type="submit" value="<?php echo $actionName.":"."UPDATE";?>" name="requestAction">Atualizar</button>
 
 <?php } ?>
