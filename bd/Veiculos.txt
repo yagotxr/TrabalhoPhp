@@ -1,0 +1,29 @@
+CREATE TABLE `bduser`.`carro` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `modelo` VARCHAR(45) NULL,
+  `ano` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+  CREATE TABLE `bduser`.`moto` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `modelo` VARCHAR(45) NULL,
+  `ano` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+  CREATE TABLE `bduser`.`caminhao` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `modelo` VARCHAR(45) NULL,
+  `ano` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+  CREATE TABLE `bduser`.`aviao` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `modelo` VARCHAR(45) NULL,
+  `ano` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+  CREATE TABLE `bduser`.`trem` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `modelo` VARCHAR(45) NULL,
+  `ano` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));

@@ -22,10 +22,10 @@ class Connection {
    */
    private function configuraDados()
    {
-	   $this->bd = 'bd';
-	   $this->host = 'localhost';
+	   $this->bd = 'bduser';
+	   $this->host = '127.0.0.1';
 	   $this->usuario = 'root';
-	   $this->senha = '';
+	   $this->senha = 'Carol123';
    }
    
    function __construct()
