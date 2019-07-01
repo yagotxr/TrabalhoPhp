@@ -1,10 +1,39 @@
 <form action="" method="POST">
     <div class="wrapper fadeInDown">
         <div id="formContent">
-            <button type="submit" value="<?php echo $actionName.":"."CREATE";?>" name="requestAction">Cadastrar</button>
-            <button type="submit" value="<?php echo $actionName.":"."READ";?>" name="requestAction">Listar</button>
-            <button type="submit" value="<?php echo $actionName.":"."UPDATE";?>" name="requestAction">Atualizar</button>
-            <button type="submit" value="<?php echo $actionName.":"."DELETE";?>" name="requestAction">Deletar</button>
+            <select>
+                <option  disabled selected>Cadastrar Veículo:</option>
+                <option value="<?php echo $actionName.":"."CREATE";?>" name="requestAction">Avião</option>
+                <option value="<?php echo $actionName.":"."CREATE";?>" name="requestAction">Caminhão</option>
+                <option value="<?php echo $actionName.":"."CREATE";?>" name="requestAction">Carro</option>
+                <option value="<?php echo $actionName.":"."CREATE";?>" name="requestAction">Moto</option>
+                <option value="<?php echo $actionName.":"."CREATE";?>" name="requestAction">Trem</option>
+            </select>
+            <select>
+                <option  disabled selected>Listar Veículos:</option>
+                <option value="<?php echo $actionName.":"."READ";?>" name="requestAction">Avião</option>
+                <option value="<?php echo $actionName.":"."READ";?>" name="requestAction">Caminhão</option>
+                <option value="<?php echo $actionName.":"."READ";?>" name="requestAction">Carro</option>
+                <option value="<?php echo $actionName.":"."READ";?>" name="requestAction">Moto</option>
+                <option value="<?php echo $actionName.":"."READ";?>" name="requestAction">Trem</option>
+            </select>
+            <select>
+                <option  disabled selected>Atualizar Veículo:</option>
+                <option value="<?php echo $actionName.":"."UPDATE";?>" name="requestAction">Avião</option>
+                <option value="<?php echo $actionName.":"."UPDATE";?>" name="requestAction">Caminhão</option>
+                <option value="<?php echo $actionName.":"."UPDATE";?>" name="requestAction">Carro</option>
+                <option value="<?php echo $actionName.":"."UPDATE";?>" name="requestAction">Moto</option>
+                <option value="<?php echo $actionName.":"."UPDATE";?>" name="requestAction">Trem</option>
+            </select>
+            <select>
+                <option  disabled selected>Deletar Veículo:</option>
+                <option value="<?php echo $actionName.":"."DELETE";?>" name="requestAction">Avião</option>
+                <option value="<?php echo $actionName.":"."DELETE";?>" name="requestAction">Caminhão</option>
+                <option value="<?php echo $actionName.":"."DELETE";?>" name="requestAction">Carro</option>
+                <option value="<?php echo $actionName.":"."DELETE";?>" name="requestAction">Moto</option>
+                <option value="<?php echo $actionName.":"."DELETE";?>" name="requestAction">Trem</option>
+            </select>
+
             <button type="submit" value="<?php echo $actionName.":"."BACK";?>" name="requestAction">Sair</button>
         </div>
     </div>
@@ -19,7 +48,7 @@
     overflow: hidden;
     }
 
-    button {
+    button, select {
         float: left;
         background-color: #56baed;
         border: none;
