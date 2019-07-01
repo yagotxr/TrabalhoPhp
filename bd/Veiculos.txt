@@ -27,3 +27,24 @@ CREATE TABLE `bduser`.`carro` (
   `modelo` VARCHAR(45) NULL,
   `ano` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
+
+INSERT INTO `bduser`.`aviao` (`id`, `modelo`, `ano`) VALUES ('1', 'Junkers F13', '1919');
+INSERT INTO `bduser`.`aviao` (`id`, `modelo`, `ano`) VALUES ('2', 'Handley Page Type W', '1921');
+INSERT INTO `bduser`.`aviao` (`id`, `modelo`, `ano`) VALUES ('3', 'Boeing 274', '1990');
+INSERT INTO `bduser`.`aviao` (`id`, `modelo`, `ano`) VALUES ('4', 'Boeing 307 Stratoliner', '1937');
+
+INSERT INTO `bduser`.`carro` (`id`, `modelo`, `ano`) VALUES ('1', 'Chevrolet', '1990');
+INSERT INTO `bduser`.`carro` (`id`, `modelo`, `ano`) VALUES ('2', 'Gol', '2000');
+INSERT INTO `bduser`.`carro` (`id`, `modelo`, `ano`) VALUES ('3', 'Fiat', '1994');
+
+INSERT INTO `bduser`.`moto` (`id`, `modelo`, `ano`) VALUES ('1', 'Yamaha', '1980');
+INSERT INTO `bduser`.`moto` (`id`, `modelo`, `ano`) VALUES ('2', 'Honda', '1990');
+
+INSERT INTO `bduser`.`trem` (`id`, `modelo`, `ano`) VALUES ('1', 'Fumaca', '1860');
+INSERT INTO `bduser`.`trem` (`id`, `modelo`, `ano`) VALUES ('2', 'Trem Bala', '1999');
+
+INSERT INTO `bduser`.`caminhao` (`id`, `modelo`, `ano`) VALUES ('1', 'Mercedes', '1970');
+INSERT INTO `bduser`.`caminhao` (`id`, `modelo`, `ano`) VALUES ('2', 'Atego', '1985');
+
+
+
