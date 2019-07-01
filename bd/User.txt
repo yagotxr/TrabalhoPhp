@@ -12,3 +12,6 @@ CREATE TABLE User (
 	email VARCHAR(50),
 	reg_date TIMESTAMP
 )
+
+INSERT INTO `bduser`.`user` (`id`, `nome`, `ultimoNome`, `user`, `pass`, `reg_date`) VALUES ('1', 'Carolinne', 'Rodrigues', 'Carol', '1234', '2019-05-08');
+INSERT INTO `bduser`.`user` (`id`, `nome`, `ultimoNome`, `user`, `pass`, `reg_date`) VALUES ('2', 'Yago', 'Teixeira', 'Yago', '1234', '2019-05-08');
