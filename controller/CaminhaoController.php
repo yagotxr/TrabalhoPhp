@@ -2,22 +2,22 @@
 
    namespace controller;
 
-   use model\Veiculo;
-   use model\DAO\AviaoDAO;
+   use model\User;
+   use model\DAO\CaminhaoDAO;
    use view\VeiculoView;
    use controller\MenuController;
    use controller\base\BaseController;
    use PDO;
 
-   class VeiculoController extends BaseController {
+   class CaminhaoController extends BaseController {
 
-        private $aviao;
-        private $userDAO;
+        private $caminhao;
+        private $caminhaoDAO;
 
         function __construct($optCommand) {
 
             // Create new Model
-            $this->aviao = new Aviao();
+            $this->caminhao = new Caminhao();
 
             // Create new View
             $this->view = new VeiculoView();
@@ -42,7 +42,7 @@
             $connection = $GLOBALS['connection'];
 
             // Cria nova instancia de UserDAO
-            $this->aviaoDAO = new AviaoDAO($connection, $this->aviao);
+            $this->caminhaoDAO = new CaminhaoDAO($connection, $this->caminhao);
 
             switch ($optCommand) {
                 case 'CREATE' :
@@ -53,21 +53,21 @@
                 case 'READ' :
 
                     // Set Param Model com todos os usuários
-                    $this->view->setParam($this->getAllAviao());
+                    $this->view->setParam($this->getAllCaminhao());
                     // Renderiza View
                     $this->renderView($optCommand);
                     break;
                 case 'UPDATE' :
                     
                     // Set Param Model para um usuario
-                    $this->view->setParam($this->getAviao());
+                    $this->view->setParam($this->getCaminhao());
                     // Renderiza View
                     $this->renderView($optCommand);
                     break;
                 case 'DELETE' :
 
                     // Set Param Model para um usuario
-                    $this->view->setParam($this->getAviao());
+                    $this->view->setParam($this->getCaminhao());
                     // Renderiza View
                     $this->renderView($optCommand);
                     break;
@@ -83,32 +83,32 @@
         /*
         * Método que recupera todos os Usuarios
         */
-        private function getAllAviao() {
+        private function getAllCaminhao() {
 
             // Chama método de UserDAO para recuperar todos os usuarios (SELECT)
-            $resultUsers = $this->aviaoDAO->getAllAviao();
+            $resultCaminhao = $this->caminhaoDAO->getAllCaminhao();
 
             // Armazena array de objetos
-            $allAviao = $resultAviao->fetchAll(PDO::FETCH_OBJ);
+            $allCaminhao = $resultCaminhao->fetchAll(PDO::FETCH_OBJ);
 
-            return $allAviao;
+            return $allCaminhao;
         }
 
         /*
         * Método que recupera um unico Usuario
         */
-        private function getAviao() {
+        private function getCaminhao() {
             
             // Recurso para trabalhar com sessão
             session_start();
 
             // Chama método de UserDAO para recuperar um unico usuario (SELECT)
-            $resultAviao = $this->aviaoDAO->getAviao($_SESSION["aviao"]);
+            $resultCaminhao = $this->caminhaoDAO->getCaminhao($_SESSION["caminhao"]);
 
             // Armazena array de objetos
-            $aviao = $resultAviao->fetchAll(PDO::FETCH_OBJ);
+            $caminhao = $resultCaminhao->fetchAll(PDO::FETCH_OBJ);
 
-            return $aviao;
+            return $caminhao;
         }
 
         /*
@@ -117,15 +117,14 @@
         public function request() {
 
             // Obtem elementos da tela vindos via POST HTTP
-            if (isset($_POST["modelo"])) $this->user->modelo = $_POST["modelo"];
-            if (isset($_POST["ano"])) $this->user->ano = $_POST["ano"];
-        
+            if (isset($_POST["modelo"])) $this->caminhao->modelo = $_POST["modelo"];
+            if (isset($_POST["ano"])) $this->caminhao->ano = $_POST["ano"];
 
             // Recupera Global de conexao com o banco de dados
             $connection = $GLOBALS['connection'];
 
             // Cria nova instancia de UserDAO
-            $this->aviaoDAO = new AviaoDAO($connection, $this->aviao);
+            $this->caminhaoDAO = new CaminhaoDAO($connection, $this->caminhao);
 
             // Recupera comando de requisição HTTP
             $optCommand = $this->getCommand();
@@ -134,23 +133,23 @@
                 case 'CREATE' :
 
                     // Insere novo registro no banco de dados
-                    $this->aviaoDAO->insert();
+                    $this->caminhaoDAO->insert();
                     // Mensagem
-                    $this->view->showMessage("Avião cadastrado!");
+                    $this->view->showMessage("Caminhão adicionado!");
                     break;
                 case 'UPDATE' :
 
                     // Atualiza registro no banco de dados
-                    $this->aviaoDAO->update($_SESSION["aviao"]);
+                    $this->caminhaoDAO->update($_SESSION["caminhao"]);
                     // Mensagem
-                    $this->view->showMessage("Aviao atualizado!");
+                    $this->view->showMessage("Caminhão atualizado!");
                     break;
                 case 'DELETE' :
 
                     // Deleta registro no banco de dados
-                    $this->aviaoDAO->delete($_SESSION["aviao"]);
+                    $this->caminhaoDAO->delete($_SESSION["caminhao"]);
                     // Mensagem
-                    $this->view->showMessage("Aviao excluido!");
+                    $this->view->showMessage("Caminhão excluido!");
                     break;
             }
         }
