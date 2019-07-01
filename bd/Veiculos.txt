@@ -30,12 +30,9 @@ CREATE TABLE `bduser`.`carro` (
 
 INSERT INTO `bduser`.`aviao` (`id`, `modelo`, `ano`) VALUES ('1', 'Junkers F13', '1919');
 INSERT INTO `bduser`.`aviao` (`id`, `modelo`, `ano`) VALUES ('2', 'Handley Page Type W', '1921');
-INSERT INTO `bduser`.`aviao` (`id`, `modelo`, `ano`) VALUES ('3', 'Boeing 274', '1990');
-INSERT INTO `bduser`.`aviao` (`id`, `modelo`, `ano`) VALUES ('4', 'Boeing 307 Stratoliner', '1937');
 
 INSERT INTO `bduser`.`carro` (`id`, `modelo`, `ano`) VALUES ('1', 'Chevrolet', '1990');
 INSERT INTO `bduser`.`carro` (`id`, `modelo`, `ano`) VALUES ('2', 'Gol', '2000');
-INSERT INTO `bduser`.`carro` (`id`, `modelo`, `ano`) VALUES ('3', 'Fiat', '1994');
 
 INSERT INTO `bduser`.`moto` (`id`, `modelo`, `ano`) VALUES ('1', 'Yamaha', '1980');
 INSERT INTO `bduser`.`moto` (`id`, `modelo`, `ano`) VALUES ('2', 'Honda', '1990');

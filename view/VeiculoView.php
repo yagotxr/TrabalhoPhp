@@ -20,6 +20,7 @@
             // Renderiza a tela HTML
             require_once "html/Veiculohtml.php";
 
+
             // Renderiza Superclasse
             parent::render($controller);
         }

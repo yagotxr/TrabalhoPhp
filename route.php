@@ -3,6 +3,10 @@
     use controller\LoginController;
     use controller\MenuController;
     use controller\AviaoController;
+    use controller\CarroController;
+    use controller\MotoController;
+    use controller\TremController;
+    use controller\CaminhaoController;
 
     /*
     * Verifica comando da última requisição POST HTTP
@@ -28,6 +32,10 @@
                 break;
             case 'VeiculoView' :
                 new AviaoController($command);
+                new CarroController($command);
+                new TremController($command);
+                new MotoController($command);
+                new CaminhaoController($command);
                 break;
             default:
                 //new ErrorController();

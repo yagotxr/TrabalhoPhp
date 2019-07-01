@@ -26,7 +26,6 @@
             <input type="text" name="ano" value="">
             <br>
             <br>
-
 <?php } ?>
 
 <?php if ($optCommand == "CREATE") { ?>
