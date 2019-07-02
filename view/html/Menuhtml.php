@@ -1,6 +1,9 @@
 <form action="" method="POST">
     <div class="wrapper fadeInDown">
         <div id="formContent">
+            <br>
+            <button type="submit" value="<?php echo $actionName.":"."CREATE";?>" name="requestAction">Cadastrar Usuário</button>
+
             <select>
                 <option  disabled selected>Cadastrar Veículo:</option>
                 <option value="<?php echo $actionName.":"."CREATE";?>" name="requestAction">Avião</option>
@@ -53,7 +56,7 @@
         background-color: #56baed;
         border: none;
         color: white;
-        padding: 15px 80px;
+        padding: 15px 40px;
         text-align: center;
         text-decoration: none;
         display: inline-block;

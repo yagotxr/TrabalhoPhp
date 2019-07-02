@@ -6,8 +6,9 @@
 
     <div class="wrapper fadeInDown">
         <div id="formContent">
-            <input type="text" name="user" value="<?php echo $obj->user != null ? $obj->user : null; ?>"> <br>
-            <input type="text" name="pass" value="<?php echo $obj->pass != null ? $obj->pass : null; ?>"> <br>
+            <br><br>
+            <input type="text" placeholder="Login" name="user" value="<?php echo $obj->user != null ? $obj->user : null; ?>"> <br>
+            <input type="password"  placeholder="Password" name="pass" value="<?php echo $obj->pass != null ? $obj->pass : null; ?>"> <br>
             <button type="submit" value="<?php echo $actionName;?>" name="requestAction">Logar</button>
         </div>
     </div>
@@ -15,36 +16,6 @@
 </form>
 
 <style>
-
-html {
-    background-color: #56baed;
-  }
-  
-  body {
-    font-family: "Poppins", sans-serif;
-    height: 100vh;
-  }
-  
-  a {
-    color: #92badd;
-    display:inline-block;
-    text-decoration: none;
-    font-weight: 400;
-  }
-  
-  h2 {
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    display:inline-block;
-    margin: 40px 8px 10px 8px; 
-    color: #cccccc;
-  }
-  
-  
-  
-  /* STRUCTURE */
   
   .wrapper {
     display: flex;
@@ -69,26 +40,12 @@ html {
     box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
     text-align: center;
   }
-
-  /* TABS */
   
-  h2.inactive {
-    color: #cccccc;
-  }
-  
-  h2.active {
-    color: #0d0d0d;
-    border-bottom: 2px solid #5fbae9;
-  }
-  
-  /* FORM TYPOGRAPHY*/
-  
-  input[type=button], input[type=submit], input[type=reset], button  {
+  input[type=submit], button  {
     background-color: #56baed;
     border: none;
     color: white;
     padding: 15px 80px;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
     text-transform: uppercase;
@@ -104,20 +61,8 @@ html {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  
-  input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-    background-color: #39ace7;
-  }
-  
-  input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
-    -moz-transform: scale(0.95);
-    -webkit-transform: scale(0.95);
-    -o-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95);
-  }
-  
-  input[type=text] {
+
+  input[type=text],input[type=password] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
@@ -136,15 +81,6 @@ html {
     transition: all 0.5s ease-in-out;
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
-  }
-  
-  input[type=text]:focus {
-    background-color: #fff;
-    border-bottom: 2px solid #5fbae9;
-  }
-  
-  input[type=text]:placeholder {
-    color: #cccccc;
   }
  
 </style>
